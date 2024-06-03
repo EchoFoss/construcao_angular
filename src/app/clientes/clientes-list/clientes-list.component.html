@@ -1,0 +1,17 @@
+
+<table class="table-auto">
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Telefone</th>
+    <th>Documento</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (cliente of clientesEncontrados$ | async; track cliente.id) {
+      <td>{{cliente.nomeCompleto}}</td>
+      <td>{{cliente.telefone}}</td>
+      <td>{{cliente.documento}}</td>
+    }
+  </tbody>
+</table>
