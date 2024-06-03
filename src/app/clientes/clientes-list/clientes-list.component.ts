@@ -20,8 +20,21 @@ export class ClientesListComponent {
     this.clientesEncontrados$ = this.clienteService.getAllClientes();
   }
 
-  cadastrarCliente(cliente: Cliente) {
-    this.clienteService.postCliente(cliente.id, cliente)
+  cadastrarCliente() {
+    this.clienteService.postCliente({
+      id: 1,
+      documento: "",
+      telefone: "",
+      nomeResumido: "",
+      nomeCompleto: "",
+      email: "",
+      cartaoFidelidade: "",
+      rgIe: ""
+      }).subscribe(_ => this.obterClientes());
+  }
+
+  remover(id: number) {
+    this.clienteService.deleteCliente(id).subscribe(_ => this.obterClientes());
   }
 
   constructor() {

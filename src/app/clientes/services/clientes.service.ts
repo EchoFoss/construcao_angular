@@ -15,12 +15,12 @@ export class ClientesService {
     return this.httpClient.get<Cliente>(`http://localhost:8080/cliente/${id}`)
   }
 
-  postCliente(id: number, cliente: Cliente) {
-    this.httpClient.post<Cliente>(`http://localhost:8080/cliente/${id}`, cliente)
+  postCliente(cliente: Cliente) {
+    return this.httpClient.post<Cliente>('http://localhost:8080/cliente', cliente)
   }
 
   deleteCliente(id: number) {
-    this.httpClient.delete<void>(`http://localhost:8080/cliente/${id}`)
+    return this.httpClient.delete<void>(`http://localhost:8080/cliente/${id}`)
   }
 
   editCliente(id: number, cliente: Cliente) {
