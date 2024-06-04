@@ -1,4 +1,4 @@
-interface Cliente {
+export default interface Cliente {
   id: number,
   nomeCompleto: string,
   nomeResumido: string,

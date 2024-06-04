@@ -2,6 +2,7 @@ import {Component, inject, OnDestroy} from '@angular/core';
 import {ClientesService} from "../services/clientes.service";
 import {Observable} from "rxjs";
 import {AsyncPipe} from "@angular/common";
+import Cliente from "../cliente";
 
 @Component({
   selector: 'app-clientes-list',

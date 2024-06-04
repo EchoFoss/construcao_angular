@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {GetAllClientesComponent} from "./pages/get-all-clientes/get-all-clientes.component";
+import {LandingPageComponent} from "../landing-page/landing-page.component";
 
 const routes: Routes = [
   // Main page dos clientes
   {
-    path: ""
+    path: "",
+    component: LandingPageComponent
   },
   //
   {

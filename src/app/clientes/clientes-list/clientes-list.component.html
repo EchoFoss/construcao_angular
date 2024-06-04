@@ -5,6 +5,7 @@
     <th>Nome</th>
     <th>Telefone</th>
     <th>Documento</th>
+    <th>Apagar</th>
   </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
       <td>{{cliente.nomeCompleto}}</td>
       <td>{{cliente.telefone}}</td>
       <td>{{cliente.documento}}</td>
+      <td><button (click)="remover(cliente.id)"></button></td>
     }
   </tbody>
 </table>
